@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="card alert-card fade-in">
+    <h2 class="slide-down">Send Emergency Alert</h2>
+    <p class="slide-down delay-1">
+        Select your name, enter a short message (optional), then tap 
+        <strong>Send Emergency Alert</strong>.
+    </p>
+
+    <label class="slide-left delay-2">Your name</label>
+    <select id="userSelect" class="slide-left delay-2">
+        <option value="">-- choose your name --</option>
+        {% for u in users %}
+        <option value="{{ u.id }}">{{ u.name }} — {{ u.phone }}</option>
+        {% endfor %}
+    </select>
+
+    <label class="slide-left delay-3">Message</label>
+    <textarea id="alertMsg" class="slide-left delay-3"
+        placeholder="Type a short message (e.g. I'm at risk)">
+    </textarea>
+
+    <div class="alert-actions slide-up delay-4">
+        <button id="sendBtn" class="btn danger pulse-btn">
+            Send Emergency Alert
+        </button>
+        <div id="status" class="status"></div>
+    </div>
+</div>
+
+<script>
+    // Small button animation after click
+    document.getElementById("sendBtn").addEventListener("click", () => {
+        const btn = document.getElementById("sendBtn");
+        btn.classList.add("clicked");
+        setTimeout(() => btn.classList.remove("clicked"), 500);
+    });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("sendBtn");
+    if(btn){
+        btn.addEventListener("click", () => {
+            btn.classList.add("clicked");
+            setTimeout(() => btn.classList.remove("clicked"), 180);
+        });
+    }
+});
+</script>
+
+{% endblock %}

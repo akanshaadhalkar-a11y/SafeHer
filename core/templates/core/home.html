@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero fade-in">
+  <div class="hero-content slide-up delay-1">
+    <img src="{% static 'core/images/logo.png' %}" alt="Logo" class="hero-logo slide-down delay-2">
+
+    <h1 class="hero-title slide-left delay-3">Stay Safe. Send alerts</h1>
+
+    <p class="hero-subtitle fade-in delay-4">
+      Register your emergency contacts and send your live location to them instantly.
+    </p>
+
+    <div class="hero-actions fade-in delay-4">
+      <a href="/register/" class="btn primary pulse-btn">Register Now</a>
+      <a href="/send_alert/" class="btn secondary pulse-btn">Send Alert</a>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<div class="card form-card fade-in slide-up">
+  <h2 class="form-title">Register</h2>
+
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+
+  <form method="post">
+    {% csrf_token %}
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Phone</label>
+    <input type="text" name="phone">
+
+    <label>Emergency Email 1</label>
+    <input type="email" name="email1" required>
+
+    <label>Emergency Email 2</label>
+    <input type="email" name="email2">
+
+    <label>Emergency Email 3</label>
+    <input type="email" name="email3">
+
+    <button type="submit" class="btn primary full">Save</button>
+  </form>
+</div>
+
+{% endblock %}

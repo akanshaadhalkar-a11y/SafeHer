@@ -1,0 +1,473 @@
+/* --------------------------------------------------
+   THEME COLORS
+-------------------------------------------------- */
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --primary: #df1387d2;
+  --primary-dark: #cd386e;
+  --secondary: #10b981;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --danger: #dc2626;
+  --radius: 18px;
+}
+
+
+/* --------------------------------------------------
+   RESET
+-------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+}
+
+
+
+/* --------------------------------------------------
+   NAVBAR
+-------------------------------------------------- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.nav-right a {
+  margin-left: 20px;
+  font-size: 15px;
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-right a:hover {
+  color: var(--primary);
+}
+
+
+
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+.hero {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #e8f0ff, #fff);
+}
+
+.hero-content {
+  max-width: 700px;
+  background: var(--card);
+  padding: 50px 40px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.hero-logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+}
+
+
+
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+  border: 2px solid var(--primary);
+}
+
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn.secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.danger {
+  background: var(--danger);
+  border: 2px solid var(--danger);
+  color: white;
+}
+
+.btn.danger:hover {
+  background: #b91c1c;
+}
+
+.btn.large {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+}
+
+
+
+/* --------------------------------------------------
+   BUTTON LAYOUT
+-------------------------------------------------- */
+.hero-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+
+/* --------------------------------------------------
+   CARDS (Register, Send Alert)
+-------------------------------------------------- */
+.card {
+  max-width: 500px;
+  background: var(--card);
+  padding: 35px 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+  margin: 40px auto;
+}
+
+.card h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+/* --------------------------------------------------
+   FORM ELEMENTS
+-------------------------------------------------- */
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #fafafa;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+}
+
+
+
+/* --------------------------------------------------
+   SEND ALERT PAGE EXTRA
+-------------------------------------------------- */
+.alert-card {
+  max-width: 650px;
+  padding: 40px;
+}
+
+.page-title {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+.page-sub {
+  margin-bottom: 25px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.alert-actions {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  min-height: 20px;
+  color: var(--muted);
+}
+
+
+
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+@media (max-width: 500px) {
+  .hero-content {
+    padding: 35px 20px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+/* Fade-in card */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-down */
+.slide-down {
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: slideDown 0.7s ease forwards;
+}
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-left */
+.slide-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideLeft 0.6s ease forwards;
+}
+@keyframes slideLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-up */
+.slide-up {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: slideUp 0.7s ease forwards;
+}
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay utilities */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.35s; }
+.delay-3 { animation-delay: 0.5s; }
+.delay-4 { animation-delay: 0.65s; }
+
+/* Button pulse effect */
+.pulse-btn {
+    transition: transform 0.2s ease;
+}
+
+.pulse-btn.clicked {
+    transform: scale(0.92);
+}
+
+/* Card spacing improvement */
+.alert-card {
+    padding: 25px;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+.alert-actions {
+    margin-top: 20px;
+}
+/* Card styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.card h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #f638a0;
+    font-weight: 600;
+}
+
+/* Table styling */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+}
+
+.history-table thead {
+    background-color: #f638a0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.history-table th,
+.history-table td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+}
+
+/* Hover effect on rows */
+.history-table tbody tr:hover {
+    background-color: #f9f0f8;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Links styling */
+.history-table a {
+    color: #f638a0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.history-table a:hover {
+    text-decoration: underline;
+}
+
+/* Empty row styling */
+.history-table tbody tr td[colspan="4"] {
+    text-align: center;
+    font-style: italic;
+    color: #888888;
+    padding: 20px;
+}
+
+/* Responsive table */
+@media screen and (max-width: 768px) {
+    .history-table thead {
+        display: none;
+    }
+    .history-table, 
+    .history-table tbody, 
+    .history-table tr, 
+    .history-table td {
+        display: block;
+        width: 100%;
+    }
+    .history-table tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+    .history-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .history-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: calc(50% - 30px);
+        text-align: left;
+        font-weight: 600;
+        color: #f638a0;
+    }
+}
