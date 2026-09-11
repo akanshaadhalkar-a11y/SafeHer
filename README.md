@@ -396,27 +396,6 @@ Recommended screenshots:
 7. 📋 Emergency History
 8. ℹ️ About Page
 
-Example:
-
-```
-
-### 🏠 Home Page
-
-[Home Page]<img width="1763" height="844" alt="image" src="Screenshot_11-9-2026_211627_127.0.0.1" />
-
-
-### 🔐 Login Page
-
-
-
-### 🚨 Emergency Alert
-
-
-
-### 📍 Location Sharing
-
-
-```
 
 ---
 
